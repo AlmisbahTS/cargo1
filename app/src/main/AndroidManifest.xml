@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CargoBooking">
-        <activity android:name=".Admin.EditOrderActivity"></activity>
+        <activity android:name=".Admin.EditOrderActivity" />
         <activity android:name=".Superviser.ManageOrderActivity" />
         <activity android:name=".Superviser.SupervisorHomeActivity" />
         <activity android:name=".Admin.AddOrdersActivity" />

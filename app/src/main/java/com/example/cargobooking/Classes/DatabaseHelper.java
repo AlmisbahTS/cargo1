@@ -93,6 +93,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return db.insert("tbl_orders", null, values);
     }
 
+    public long updateOrder(SQLiteDatabase db, int id, String title, String quantity, String from, String to, String date) {
+        ContentValues values = new ContentValues();
+        values.put("title", title);
+        values.put("quantity", quantity);
+        values.put("send_to", to);
+        values.put("form", from);
+        values.put("date", date);
+        return db.update("tbl_orders", values, "id='" + id + "'", null);
+    }
+
     public void cancelOrder(int id) {
         SQLiteDatabase db = getWritableDatabase();
         db.delete("tbl_orders", "id='" + id + "'", null);
